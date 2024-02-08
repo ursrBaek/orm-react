@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: rgb(229, 235, 220);
+  margin: 0 auto;
+  width: 55rem;
+}
+
+header {
+  padding: 5% 5% 0 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+header .logo {
+  text-align: left;
+  font-size: 2rem;
+  font-family: 'Gamja Flower', sans-serif;
+}
+
+header img {
+  width: 9rem;
+}
+
+header > .title p {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+header h1 {
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+}
+
+h1 span {
+  font-size: 2rem;
+}
+
+main {
+  background-color: #fff;
+  padding: 0 5% 5% 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.multiplicationTableContainer {
+  width: 23%;
+  margin: 2% 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.multiplicationTable {
+  width: 100%;
+  border: 0.3rem dashed;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-family: 'Gamja Flower', sans-serif;
+}
+
+h2 > span {
+  font-size: 6rem;
+  font-family: 'Gamja Flower', sans-serif;
+}
+
+main > div:nth-child(1) > h2 > span {
+  color: #db037e;
+}
+
+main > div:nth-child(1) > .multiplicationTable {
+  border-color: #db037e;
+}
+main > div:nth-child(2) > h2 > span {
+  color: #0387d7;
+}
+
+main > div:nth-child(2) > .multiplicationTable {
+  border-color: #0387d7;
+}
+main > div:nth-child(3) > h2 > span {
+  color: #8c0884;
+}
+
+main > div:nth-child(3) > .multiplicationTable {
+  border-color: #8c0884;
+}
+main > div:nth-child(4) > h2 > span {
+  color: #ee9605;
+}
+
+main > div:nth-child(4) > .multiplicationTable {
+  border-color: #ee9605;
+}
+main > div:nth-child(5) > h2 > span {
+  color: #006abd;
+}
+
+main > div:nth-child(5) > .multiplicationTable {
+  border-color: #006abd;
+}
+main > div:nth-child(6) > h2 > span {
+  color: #dc030e;
+}
+
+main > div:nth-child(6) > .multiplicationTable {
+  border-color: #dc030e;
+}
+main > div:nth-child(7) > h2 > span {
+  color: #019745;
+}
+
+main > div:nth-child(7) > .multiplicationTable {
+  border-color: #019745;
+}
+main > div:nth-child(8) > h2 > span {
+  color: #084a84;
+}
+
+main > div:nth-child(8) > .multiplicationTable {
+  border-color: #084a84;
+}
+
+.row {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.row > span:nth-child(1),
+.row > span:nth-child(3) {
+  width: 20%;
+}
+
+.row > span:last-child {
+  display: inline-block;
+  width: 25%;
+}
