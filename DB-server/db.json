@@ -1,7 +1,7 @@
 {
   "article": [
     {
-      "id": 1,
+      "id": "1",
       "title": "이제 곧 점심시간",
       "contents": "졸려워서 커피를 마셔야겠음.",
       "writer": "백나라",
@@ -10,25 +10,25 @@
       "count": 15
     },
     {
-      "id": 2,
-      "title": "오늘 날씨 짱",
-      "contents": "오늘 영상 14도",
+      "id": "2",
+      "password": "1234",
+      "title": "오늘 날씨 대박 짱",
+      "contents": "오늘 영상 14도~~ 덥다~~~",
+      "count": 0,
       "writer": "나라2",
-      "password": 1234,
-      "date": "2024.02.13",
-      "count": 15
+      "date": "2024.02.13"
     },
     {
-      "id": 3,
+      "id": "3",
+      "password": "1234",
       "title": "오늘뭐먹지",
-      "contents": "내일은 뭐먹지",
+      "contents": "내일은 뭐먹지dddd",
+      "count": 0,
       "writer": "나라3",
-      "password": 1234,
-      "date": "2024.02.13",
-      "count": 0
+      "date": "2024.02.13"
     },
     {
-      "id": 4,
+      "id": "4",
       "password": "1234",
       "title": "하아아아",
       "contents": "ㅇㅇㅇㅇ",

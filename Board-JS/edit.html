@@ -91,47 +91,26 @@
           return false;
         }
 
-        $.get(`http://localhost:3000/article?id=${articleIdx}`, function (data) {
-          // 새로운 article 객체 생성 및 id 설정
-          var newArticle = {
-            id: articleIdx,
-            password: $('#password').val(),
-            title: $('#title').val(),
-            contents: $('#contents').val(),
-            count: 0,
-            writer: $('#writer').val(),
-            date: '2024.02.13',
-          };
+        var newArticle = {
+          id: articleIdx,
+          password: $('#password').val(),
+          title: $('#title').val(),
+          contents: $('#contents').val(),
+          count: 0,
+          writer: $('#writer').val(),
+          date: '2024.02.13',
+        };
 
-          // 게시글 등록 API 호출하기
-          $.put(`http://localhost:3000/article/${articleIdx}`, JSON.stringify(newArticle))
-            .done(function (result) {
-              window.location.href = './list.html';
-              alert('수정완료');
-            })
-            .fail(function (error) {
-              console.error('수정 실패:', error);
-            });
+        fetch('http://localhost:3000/article/' + articleIdx, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newArticle),
+        }).then((response) => {
+          window.location.href = './list.html';
+          alert('수정완료');
         });
-
-        // var article = {
-        //   ArticleIDX: articleIdx,
-        //   BoardIDX: 0,
-        //   ArticlePWD: $('#password').val(),
-        //   ArticleTypeCode: 0,
-        //   Title: $('#title').val(),
-        //   Contents: $('#contents').val(),
-        //   ViewCount: 0,
-        //   IsDisplayYN: 1,
-        //   RegistUserID: $('#writer').val(),
-        //   RegistDate: '2023-03-31',
-        // };
-
-        // //게시글 수정 API 호출하기
-        // $.post('http://edu.msoftware.co.kr/api/article/update', article).done(function (result) {
-        //   alert('수정완료');
-        //   location.href = './list.html';
-        // });
       }
     </script>
   </body>
