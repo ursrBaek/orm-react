@@ -1,24 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useFormik } from "formik";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
 
-import * as Yup from "yup";
+import * as Yup from 'yup';
 
 const Login = () => {
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     },
     validationSchema: Yup.object({
-      email: Yup.string().required("메일주소를 입력해주세요."),
-      password: Yup.string().required("암호를 입력해주세요."),
+      email: Yup.string().required('메일주소를 입력해주세요.'),
+      password: Yup.string().required('암호를 입력해주세요.'),
     }),
     onSubmit: (values) => {
       var loginData = {
         email: values.email,
         password: values.password,
       };
+
+      window.localStorage.setItem('jwttoken', 'tempToken');
     },
   });
 
@@ -38,25 +40,15 @@ const Login = () => {
           value={formik.values.email}
           invalid={formik.touched.email && formik.errors.email ? true : false}
         />
-        {formik.touched.email && formik.errors.email ? (
-          <p>{formik.errors.email}</p>
-        ) : null}
+        {formik.touched.email && formik.errors.email ? <p>{formik.errors.email}</p> : null}
       </div>
       <div className="mb-3">
         <label>Password</label>
-        <input
-          type="password"
-          className="form-control"
-          placeholder="Enter password"
-        />
+        <input type="password" className="form-control" placeholder="Enter password" />
       </div>
       <div className="mb-3">
         <div className="custom-control custom-checkbox">
-          <input
-            type="checkbox"
-            className="custom-control-input"
-            id="customCheck1"
-          />
+          <input type="checkbox" className="custom-control-input" id="customCheck1" />
           <label className="custom-control-label" htmlFor="customCheck1">
             Remember me
           </label>
